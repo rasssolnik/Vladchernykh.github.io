@@ -1,0 +1,111 @@
+/* Стили для мобильных устройств */
+@media only screen and (max-width: 600px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    footer {
+        text-align: center;
+    }
+}
+
+body {
+    background-image: url('default.jpg');
+    background-size: auto;
+    color: #333; /* Цвет текста для контраста */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #f0f0f0;
+    opacity: 0.9;
+    background-size: cover;
+    text-align: center;
+    padding: 20px;
+    color: #333; /* Цвет текста для контраста */
+}
+
+h1 {
+    color: #333;
+    font-size: 32px;
+    font-family: 'Arial', sans-serif;
+    text-transform: uppercase;
+}
+
+a {
+    text-decoration: none; /* Убираем подчеркивание у ссылок */
+    color: #4169E1; /* Цвет текста ссылок - синий */
+    font-weight: bold;
+}
+
+    a:hover {
+        text-decoration: underline; /* Подчеркивание при наведении на ссылку */
+        color: #FF6347; /* Цвет текста ссылок при наведении - оранжевый */
+    }
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+body {
+    background-size: cover;
+}
+
+
+section {
+    background-color: #f4f4f4;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+img {
+    width: 400px; /* Задаем ширину картинки */
+    height: auto; /* Автоматически рассчитываем высоту, чтобы сохранить пропорции */
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+p {
+    line-height: 1.6;
+}
