@@ -1,57 +1,49 @@
 <!DOCTYPE html>
-<html lang="ru">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Ядерные реакторы: от теории к практике</title>
+    <title>A-Frame Example</title>
+    <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js"></script>
 </head>
-
 <body>
+    <a-scene>
+        <a-sound src="src: url(click.mp3)" autoplay="true" position="10 3 10"></a-sound>
+        <a-box id="box1" position="3 3 -3" rotation="0 45 45" color="#FF0000" !--animation="property: position; to: 3 8 -3; dur: 2000; easing: linear; loop: true" animation_2="property: position; position; to 5 10 -5; dur:2000; easing: linear; loop:true"></a-box>
+        <a-sphere position="0 3 -3" rotation="0 45 45" color="#BB1234" radius="2" event-set__enter="_event: click; color: #ADFF2F"></a-sphere>
+            <a-animation property="position" to="3 3 -8" dur = "8000" easing="linear" loop="true"></a-animation>
 
-    <script src="script.js"></script>
-
-    <header>
-        <h1>Добро пожаловать на сайт "Ядерные реакторы"!</h1>
-    </header>
-
-    <main>
-
-        <button onclick="changeBackgroundImage()">Boom!</button>
-
-        <section>
-            <h2>Увлекательный мир ядерных реакторов</h2>
-            <p>Здесь вы найдете информацию о различных типах ядерных реакторов, их принципах работы и многое другое!</p>
-            <p>Интересный факт: первый контролируемый ядерный реактор был запущен в 1942 году в рамках проекта Манхэттен.</p>
-            <p>Познакомьтесь с увлекательным миром ядерной энергетики прямо здесь!</p>
-
-            <h3>Типы ядерных реакторов:</h3>
-            <ul>
-                <li><strong>Термоядерный реактор:</strong> использует термоядерный синтез в качестве источника энергии.</li>
-                <li><strong>Тепловой реактор:</strong> использует ядерные реакции для производства тепла, которое затем преобразуется в электроэнергию.</li>
-                <li><strong>Быстрый реактор:</strong> использует быстрые нейтроны для поддержания цепной реакции ядерного расщепления.</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Картинки ядерных реакторов</h2>
-
-            <img src="termonuclearreactor_type.jpg" alt="Термоядерный реактор">
-            <p><a href="https://ru.wikipedia.org/wiki/%D0%A3%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D1%8F%D0%B5%D0%BC%D1%8B%D0%B9_%D1%82%D0%B5%D1%80%D0%BC%D0%BE%D1%8F%D0%B4%D0%B5%D1%80%D0%BD%D1%8B%D0%B9_%D1%81%D0%B8%D0%BD%D1%82%D0%B5%D0%B7">Термоядерный реактор</a></p>
-
-            <img src="nuclearreactor_type.jpg" alt="Тепловой реактор">
-            <p><a href="https://ru.wikipedia.org/wiki/%D0%A0%D0%B5%D0%B0%D0%BA%D1%82%D0%BE%D1%80_%D0%BD%D0%B0_%D1%82%D0%B5%D0%BF%D0%BB%D0%BE%D0%B2%D1%8B%D1%85_%D0%BD%D0%B5%D0%B9%D1%82%D1%80%D0%BE%D0%BD%D0%B0%D1%85">Тепловой реактор</a></p>
-
-            <img src="fastneclearreactor_type.jpg" alt="Быстрый реактор">
-            <p><a href="https://ru.wikipedia.org/wiki/%D0%A0%D0%B5%D0%B0%D0%BA%D1%82%D0%BE%D1%80_%D0%BD%D0%B0_%D0%B1%D1%8B%D1%81%D1%82%D1%80%D1%8B%D1%85_%D0%BD%D0%B5%D0%B9%D1%82%D1%80%D0%BE%D0%BD%D0%B0%D1%85">Быстрый реактор</a></p>
-        </section>
-    </main>
-
-
-    <footer>
-        <p>&copy; 2024 Ядерные реакторы: от теории к практике</p>
-    </footer>
+        <a-cylinder position="-3 3 -3" rotation="0 45 45" color="SD2495" height="3" animation = "property: position; to: 3 8 -3; dur: 8000; easing: linear; loop: true" event-set__enter="_event: mouseenter; color: #69ACF0" event-set__leave="_event: mouseleave; color: #1C43D9"><a-cylinder>
+        <a-torus position="10 1 10" color="#43A367" arc="270" radius="5" radius-tubular="0.1" animation="property: radius-tubular; to: 1; dur: 4000; easing: linear; loop: true"></a-torus>
+        <!--a-cone position="10 2 10" color="tomato" radius-bottom="2" radius-top="0.5" animation="property: radius-top; to: 3; dur: 4000; easing: linear; loop: true"></a-cone-->
+        <a-light color="#FFC618" position="-3 3 0"></a-light>
+        <a-camera>
+            <a-cursor></a-cursor>
+        </a-camera>
+        <a-cone id="a-sphere" position="10 2 10" color="tomato" radius-bottom="2" radius-top="0.5" ></a-cone>
+        <a-text value="Hello!" scale="1 1 1" color="#FFC618" position="3 4 -3" repeat="indefinite"></a-text>
+        <a-plane  position="4 0 0"  width="1"  height="0.5"  color="orange"  text="align: center" class="clickable" onclick="changePosition()"></a-plane>
+        <a-plane position="6 0 0" width="1" height="0.5" color="orange" text="align: center" class="clickable" onclick="changeAnimation()"></a-plane>
+        <a-box id="box1" position="1 1 1" color="#FF15000"  rotation="0 0 0" animation="property: position; to: 1 1 1; dur: 4000; easing: linear; loop: true"></a-box>
+    </a-scene>
+    <script>
+        function changePosition() {
+        const box = document.querySelector('#a-sphere');
+        box.setAttribute('position', '0 2 -3');
+      }
+    </script>
+    <script>
+      function changeAnimation() {
+        const box = document.querySelector('#box1');
+        box.setAttribute('animation', {
+          property: 'rotation',
+          to: '0 360 0',
+          loop: true,
+          dur: 2000
+        });
+      }
+    </script>
 </body>
-
 </html>
+<!--scale="1.5 1.5 1.5"-вращение>
